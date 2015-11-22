@@ -10,10 +10,11 @@ shinyUI(pageWithSidebar(
   ),
   mainPanel(
     h3("Predicted miles per gallon"),
-    h4("This shiny app can be used to predict the miles per gallon of a car, given its weight in pounds (lbs). To use the app, enter the weight of your car in pounds in the box on the left, and press the submit button. Your predicted miles per gallon will be calculated and shown on the right of the page."),
+    h4("This shiny app can be used to predict the miles per gallon of a car, given its weight in pounds (lbs) and its transmission type. To use the app, enter the weight of your car in pounds in the box on the left, select the transmission type, and press the submit button. Your predicted miles per gallon will be calculated and shown below."),
     h3("Prediction"), 
-    h4("For a car of weight (lbs)"),
+    h4("For a car of weight (lbs) and transmission type"),
     verbatimTextOutput("inputValue"),
+    verbatimTextOutput("inputTransmission"),
     h4("Your predicted miles per gallon is"),
     verbatimTextOutput("prediction")
   )
